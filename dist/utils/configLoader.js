@@ -12,7 +12,7 @@ const MODULE_NAME = 'gitai';
 // Define global config directory
 export const GLOBAL_CONFIG_DIR = path.resolve(os.homedir(), '.gitai');
 // Load environment variables from git-root.env file
-dotenv.config({ path: await getRepoRoot() + '/.env' });
+dotenv.config({ path: path.resolve(await getRepoRoot() ?? '', '.env') });
 // cosmiconfig loaders definition
 const defaultLoaders = {
     '.yaml': (filepath, content) => yaml.load(content), // any for now
