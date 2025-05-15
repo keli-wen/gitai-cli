@@ -8,7 +8,7 @@ A vibe-coding project. ✨
 >
 > **GitAI CLI is your intelligent Git assistant, supercharging your workflow with AI-powered command generation. Craft perfect commit messages and pull request descriptions in seconds!**
 
-![excalidraw-animate](./assets/gitai-cli-outline.svg)
+![excalidraw-animate](./assets/gitai-cli-outline.png)
 
 ![demo1](./assets/gitai-cli-example-1.gif)
 

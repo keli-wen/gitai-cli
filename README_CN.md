@@ -8,7 +8,7 @@ Vibe-Coding Project✨
 >
 > **GitAI CLI 是你的智能 Git 助手，通过 AI 驱动的命令生成，为你的工作流超级加速。在几秒钟内打造完美的提交信息和拉取请求描述！**
 
-![excalidraw-animate](./assets/gitai-cli-outline.svg)
+![excalidraw-animate](./assets/gitai-cli-outline.png`)
 
 ![demo1](./assets/gitai-cli-example-1.gif)
 
