@@ -1,0 +1,8 @@
+src/
+tests/
+.github/
+.vscode/
+*.log
+*.tgz
+tsconfig.json
+.eslintrc

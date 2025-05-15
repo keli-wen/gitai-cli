@@ -1,0 +1,57 @@
+{
+  "name": "@lastwhisper-dev/gitai-cli",
+  "version": "0.1.1",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "AI powered Git assistant",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "gitai": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/cli.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build",
+    "postinstall": "node dist/scripts/bootstrapGlobal.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/lodash.merge": "^4.6.9",
+    "chalk": "^5.4.1",
+    "cli-table3": "^0.6.5",
+    "commander": "^13.1.0",
+    "cosmiconfig": "^9.0.0",
+    "dotenv": "^16.5.0",
+    "https-proxy-agent": "^7.0.6",
+    "inquirer": "^12.6.1",
+    "js-yaml": "^4.1.0",
+    "lodash.merge": "^4.6.2",
+    "node-fetch": "^2.7.0",
+    "ora": "^8.2.0",
+    "simple-git": "^3.27.0",
+    "undici": "^7.9.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.8",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.15.17",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "files": [
+    "dist/",
+    "assets/",
+    "LICENSE",
+    "README.md",
+    "README_CN.md",
+    ".env-example"
+  ]
+}
