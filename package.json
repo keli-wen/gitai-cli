@@ -1,6 +1,6 @@
 {
   "name": "@lastwhisper-dev/gitai-cli",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -49,6 +49,7 @@
   "files": [
     "dist/",
     "assets/",
+    "templates/",
     "LICENSE",
     "README.md",
     "README_CN.md",
