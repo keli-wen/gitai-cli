@@ -14,7 +14,7 @@ export async function getRepoRoot(): Promise<string | null> {
         const root = await git.revparse(['--show-toplevel']);
         return root.trim();
     } catch (error: any) {
-        logger.error(`Error getting git repository root: ${error.message}`);
+        logger.warn('Error getting git repository root, please use "git init" to initialize a git repository first.');
         return null;
     }
 }
