@@ -108,6 +108,14 @@ Now you can use `gitai` commands anywhere on your system.
    # HTTPS_PROXY="Your Proxy URL" # or HTTP_PROXY, ALL_PROXY
    ```
 
+   If you want to use `gitai` in any project easily, you can set the environment variables in your shell profile (e.g. `.zshrc` or `.bashrc`):
+
+   ```bash
+   # In your .zshrc or .bashrc
+   export OPENAI_API_KEY="Your OpenAI API Key"
+   export OPENAI_BASE_URL="https://api.openai.com/v1"
+   ```
+
 2. **Initialize GitAI Configuration:**
 
    Navigate to your Git project's root directory and run:

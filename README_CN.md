@@ -114,6 +114,13 @@ npm run build && npm link        # 创建全局符号链接以方便开发
    # HTTPS_PROXY="你的代理 URL" # or HTTP_PROXY, ALL_PROXY
    ```
 
+    如果你想在任何项目中轻松使用 `gitai`，你可以在你的 shell 配置文件（例如 `.zshrc` 或 `.bashrc`）中设置环境变量：
+
+    ```bash
+    export OPENAI_API_KEY="Your OpenAI API Key"
+    export OPENAI_BASE_URL="https://api.openai.com/v1"
+    ```
+
 2.  **初始化 GitAI 配置：**
 
     导航到你的 Git 项目根目录并运行：
