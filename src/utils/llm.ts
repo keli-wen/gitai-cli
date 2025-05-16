@@ -82,6 +82,7 @@ async function callGenericLLM(
             model: model,
             messages: [{ role: 'user', content: prompt }],
             temperature: temperature,
+            stream: false,
         };
     } else {
         // OpenAI and compatible APIs
@@ -128,6 +129,7 @@ async function callGenericLLM(
         }
 
         const data = await response.json();
+        logger.debug("data", data);
         
         // Handle different response formats based on provider
         if (provider === 'gemini') {
