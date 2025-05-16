@@ -12,7 +12,7 @@
 
 A vibe-coding project. ✨
 
-![excalidraw-animate](./assets/gitai-cli-outline.png)
+![excalidraw-animate](./assets/gitai-cli-outline-new.png)
 
 > [!Note]
 >
