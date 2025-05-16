@@ -1,16 +1,22 @@
-# <img src="./assets/gitai-cli-logo.jpg" alt="GitAI CLI" width="8%" /> GitAI CLI
+<h1 align="center">GitAI CLI</h1>
+<p align="center">Smart CLI for AI-driven Git commit & PR generation.</p>
+
+<p align="center"><code>npm i -g @lastwhisper-dev/gitai-cli</code></p>
+
+![demo1](./assets/gitai-cli-example-1.gif)
+
+<video src="https://github.com/user-attachments/assets/f8151846-9825-409a-a99f-fa5103246d22" width="320" height="240" controls>
+</video>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A vibe-coding project. ✨
 
+![excalidraw-animate](./assets/gitai-cli-outline.png)
+
 > [!Note]
 >
 > **GitAI CLI is your intelligent Git assistant, supercharging your workflow with AI-powered command generation. Craft perfect commit messages and pull request descriptions in seconds!**
-
-![excalidraw-animate](./assets/gitai-cli-outline.png)
-
-![demo1](./assets/gitai-cli-example-1.gif)
 
 > [!Tip]
 >
@@ -35,7 +41,7 @@ npm i -g @lastwhisper-dev/gitai-cli               # OR: pnpm add -g @lastwhisper
 
 # 2. Bootstrap a repo
 cd ~/my-project
-gitai init                       # creates .gitai/ with default config
+gitai init                       # creates .gitai/ with default config & .env-example
 
 # 3. Add your keys  ➜  copy .env-example > .env  and fill the blanks
 cp .env-example .env
@@ -51,6 +57,22 @@ gitai commit -n 3                # returns 3 commit-message suggestions
 gitai pr -t main                 # writes .gitai/pr_docs/<ts>-feature.md
 ```
 
+> [!Tip]
+>
+> If you have permission issues, try:
+>
+> ```bash
+> # For macOS & Linux
+> sudo npm i -g @lastwhisper-dev/gitai-cli
+> # For Windows, use PowerShell/CMD in admin mode
+> ```
+>
+> If you have network issues, try:
+>
+> ```bash
+> npm config set registry https://registry.npmmirror.com
+> ```
+
 ### Install from source
 
 ```bash
@@ -65,7 +87,7 @@ Now you can use `gitai` commands anywhere on your system.
 
 1. **Set up API Keys (Environment Variables):**
 
-   GitAI CLI needs API keys for the LLM providers you intend to use. Create a `.env` file in your project root or set these globally in your shell environment. See `.env-example` for a template:
+   GitAI CLI needs API keys for the LLM providers you intend to use. Create a `.env` file in your project root or set these globally in your shell environment. See `.env-example` for a template (created by `gitai init`):
 
    ```env
    OPENAI_API_KEY="Your OpenAI API Key"
@@ -131,7 +153,7 @@ Now you can use `gitai` commands anywhere on your system.
 - **`gitai commit`**:
   - Automatically generates commit messages based on your staged changes.
   - Provides multiple suggestions for you to choose from.
-  - Adheres to Conventional Commits format by default.
+  - Adheres to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format by default.
   - Allows custom prompts for tailored message styles.
 - **`gitai pr`**:
   - Generates comprehensive Pull Request titles and descriptions.

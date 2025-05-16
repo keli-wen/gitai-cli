@@ -1,16 +1,23 @@
-# <img src="./assets/gitai-cli-logo.jpg" alt="GitAI CLI 标志" width="8%" /> GitAI CLI
+<h1 align="center">GitAI CLI</h1>
+<p align="center">Smart CLI for AI-driven Git commit & PR generation.</p>
+
+<p align="center"><code>npm i -g @lastwhisper-dev/gitai-cli</code></p>
+
+![demo1](./assets/gitai-cli-example-1.gif)
+
+<video src="https://github.com/user-attachments/assets/f8151846-9825-409a-a99f-fa5103246d22" width="320" height="240" controls>
+</video>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Vibe-Coding Project✨
+A vibe-coding project. ✨
+
+![excalidraw-animate](./assets/gitai-cli-outline.png)
 
 > [!Note]
 >
 > **GitAI CLI 是你的智能 Git 助手，通过 AI 驱动的命令生成，为你的工作流超级加速。在几秒钟内打造完美的提交信息和拉取请求描述！**
 
-![excalidraw-animate](./assets/gitai-cli-outline.png`)
-
-![demo1](./assets/gitai-cli-example-1.gif)
 
 > [!Tip]
 >
@@ -35,7 +42,7 @@ npm i -g @lastwhisper-dev/gitai-cli               # 或: pnpm add -g @lastwhispe
 
 # 2. 初始化一个仓库
 cd ~/my-project
-gitai init                       # 会创建包含默认配置的 .gitai/ 目录
+gitai init                       # 会创建包含默认配置的 .gitai/ 目录 & .env-example 文件
 
 # 3. 添加你的密钥  ➜  复制 .env-example 为 .env 并填写
 cp .env-example .env
@@ -51,6 +58,22 @@ gitai commit -n 3                # 返回 3 条提交信息建议
 gitai pr -t main                 # 会将 PR 内容写入 .gitai/pr_docs/<ts>-feature.md
 ```
 
+> [!Tip]
+>
+> 如果你有权限问题，可以尝试：
+>
+> ```bash
+> # For macOS & Linux
+> sudo npm i -g @lastwhisper-dev/gitai-cli
+> # For Windows, use PowerShell/CMD in admin mode
+> ```
+>
+> 如果你有网络问题，可以尝试：
+>
+> ```bash
+> npm config set registry https://registry.npmmirror.com
+> ```
+
 ### 从源码安装
 
 ```bash
@@ -65,7 +88,7 @@ npm run build && npm link        # 创建全局符号链接以方便开发
 
 1. **设置 API 密钥 (环境变量)：**
 
-   GitAI CLI 需要你计划使用的 LLM 提供商的 API 密钥。在你的项目根目录创建一个 `.env` 文件，或者在你的 Shell 环境中全局设置这些变量。请参考 `.env-example` 文件作为模板：
+   GitAI CLI 需要你计划使用的 LLM 提供商的 API 密钥。在你的项目根目录创建一个 `.env` 文件，或者在你的 Shell 环境中全局设置这些变量。请参考 `.env-example` 文件作为模板（`gitai init` 会自动创建）：
 
    ```env
    # OpenAI 配置
@@ -136,7 +159,7 @@ npm run build && npm link        # 创建全局符号链接以方便开发
 -   **`gitai commit`**：
     -   根据你暂存的更改自动生成提交信息。
     -   提供多个建议供你选择（默认 3 个）。
-    -   默认遵循 Conventional Commits 格式。
+    -   默认遵循 [Conventional Commits 规范](https://www.conventionalcommits.org/en/v1.0.0/) 格式。
     -   允许使用**自定义提示词**来定制消息风格。
 -   **`gitai pr`**：
     -   生成全面的拉取请求标题和描述。
