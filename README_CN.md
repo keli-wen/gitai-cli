@@ -5,7 +5,7 @@
 
 ![demo1](./assets/gitai-cli-example-1.gif)
 
-<video src="https://github.com/user-attachments/assets/f8151846-9825-409a-a99f-fa5103246d22" width="320" height="240" controls>
+<video src="https://github.com/user-attachments/assets/35c83493-1705-4ee0-b2f2-33ab9486ae0b" width="320" height="240" controls>
 </video>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
